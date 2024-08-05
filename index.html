@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PanoSent">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PanoSent: A Panoptic Sextuple Extraction Benchmark for Multimodal Conversational Aspect-based Sentiment Analysis</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PanoSent: A Panoptic Sextuple Extraction Benchmark for Multimodal Conversational Aspect-based Sentiment Analysis</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/Eurekaleo/">Meng Luo</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://haofei.vip/">Hao Fei</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=90mnP8MAAAAJ&hl=en">Bobo Li</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://chocowu.github.io/">Shengqiong Wu</a><sup>1</sup>,
+            </span>
+              <a href="https://profiles.auckland.ac.nz/liu-qian">Qian Liu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.sg/citations?user=oS6gRc4AAAAJ&hl=en">Soujanya Poria</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=ilSYpW0AAAAJ&hl=en">Erik Cambria</a><sup>4</sup>,</span>
+            <span class="author-block">
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~leeml/">Mong-Li Lee</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~whsu/">Wynne Hsu</a><sup>1</sup>
+            </span>
+          </div>
+
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>National University of Singapore</span> &nbsp;
+            <span class="author-block"><sup>2</sup>Wuhan University</span> &nbsp;
+            <span class="author-block"><sup>3</sup>The University of Auckland</span><br>
+            <span class="author-block"><sup>4</sup>Singapore University of Technology</span> &nbsp;
+            <span class="author-block"><sup>5</sup>Nanyang Technological University</span><br>
+          </div>
+          <br>
+          <span class="author-block" style="font-size: 20px;">Accepted by ACM MM 2024 (Oral)</span><br>
+          <span class="author-block" style="font-size: 20px;">(* Correspondence)</span>
+          <br><br>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://is.gd/fcfZeO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Eurekaleo/PanoSent"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/xxxxxx"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/xxxxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              
+               <span class="link-block">
+                <a href="https://huggingface.co/spaces/xxxx/VoT" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-laugh"></i>
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+              <a href="./static/media/xxxxx.pdf" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <svg class="svg-inline--fa fa-chalkboard fa-w-20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chalkboard" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M96 64h448v352h64V40c0-22.06-17.94-40-40-40H72C49.94 0 32 17.94 32 40v376h64V64zm528 384H480v-64H288v64H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></svg><!-- <i class="fas fa-chalkboard"></i> Font Awesome fontawesome.com -->
+                </span>
+                <span>Poster</span>
+              </a>
+            </span>
+
+              <!-- Dataset Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://github.com/google/nerfies/releases/tag/0.1"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="far fa-images"></i>-->
+<!--                  </span>-->
+<!--                  <span>Data</span>-->
+<!--                  </a>                -->
+<!--              </span>-->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--<section class="hero is-light is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-steve">-->
+<!--          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/steve.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-chair-tp">-->
+<!--          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/chair-tp.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-shiba">-->
+<!--          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/shiba.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-fullbody">-->
+<!--          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/fullbody.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-blueshirt">-->
+<!--          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/blueshirt.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-mask">-->
+<!--          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/mask.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-coffee">-->
+<!--          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/coffee.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-toby">-->
+<!--          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/toby2.mp4"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While existing Aspect-based Sentiment Analysis (ABSA) has received extensive effort and advancement, there are still gaps in
+            defining a more holistic research target seamlessly integrating multimodality, conversation context, fine-granularity, and also covering
+            the changing sentiment dynamics as well as cognitive causal rationales. This paper bridges the gaps by introducing a multimodal
+            conversational ABSA, where two novel subtasks are proposed: 1) Panoptic Sentiment Sextuple Extraction, panoramically recognizing holder, target, aspect, opinion, sentiment, rationale from multi-turn multi-party multimodal dialogue. 
+            2) Sentiment Flipping Analysis, detecting the dynamic sentiment transformation throughout the conversation with the causal reasons. To benchmark
+            the tasks, we construct PanoSent, a dataset annotated both manually and automatically, featuring high quality, large scale (20,000 dialogues), multimodality (text, image, audio and video), multilingualism (English, Chinese and Spanish), 
+            multi-scenarios (over 100 domains), and covering both implicit&explicit sentiment elements. Further, to effectively address the tasks, we devise a novel Chain-of-Sentiment reasoning framework, together with a novel multimodal
+            large language model (namely Sentica) and a paraphrase-based verification mechanism. Extensive evaluations demonstrate the
+            superiority of our methods over strong baselines, validating the efficacy of all our proposed methods. The work is expected to open up a new era for the ABSA community.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Presentation</h2>-->
+<!--        <div class="publication-video">-->
+<!--          <video  controls playsinline height="100%">-->
+<!--              <source src="./static/media/paper-intro-468-recd.mp4" type="video/mp4">-->
+<!--            </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper intro. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">PanoSent</h2>
+        <h2 class="title is-3" style="margin-top: -10px">A Multimodal Conversational ABSA Dataset</h2>
+<!--          <p style="text-align:left" >-->
+<!--            Here is the illustration of detecting the explicit and implicit sentiment polarities towards targets.-->
+<!--            Explicit opinion expression can help direct inference of the sentiment, while detecting implicit sentiment requires common-sense and multi-hop reasoning.-->
+<!--          </p><br>-->
+        <div class="publication-image" style="text-align:left">
+          <b style="text-align:left;font-size: 1.5em">▶PanoSent Benchmark</b>
+        </div>
+        <div class="publication-image" style="text-align:center">
+          <img width="40%" src="./static/images/intro.png">
+        </div>
+        <br>
+
+    </div>
+    <!--/ Paper intro. -->
+  </div>
+</section>
+
+<section class="section" style="margin-top: -10px">
+  <div class="container is-max-desktop">
+    <!-- Paper method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Sentica MLLM</h2>
+        <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">Multimodal LLM Backbone</h2>
+          <p style="text-align:left">
+          We develop a novel MLLM, namely <b>Sentica</b>. Specifically, we leverage ImageBind as the unified encoders for all three non-text modalities. 
+          Then, a linear layer connects ImageBind to LLM for representation projection.
+          </p><br>
+        <div class="publication-image">
+          <img width="60%" src="./static/images/framework.png">
+        </div>
+        <br>
+
+
+        <div class="publication-image" style="text-align:left">
+          <b style="font-size: 1.5em">▶ CoS Reasoning Framework</b>
+          <p style="text-align:justify">We consider a human-like process of sentiment understanding and propose a <b>Chain-of-Sentiment (CoS)</b> reasoning framework.
+          For example, the opinion should be detected before determining the sentiment polarity; likewise, identifying the target and aspect has a higher priority over recognizing the opinion.
+          Thus, our main idea is that we deconstruct the two subtasks into four progressive, chained reasoning steps, from simpler to more complex.
+          Using the capability of Sentica, solving each step incrementally accumulates key clues and insights for the follow-up steps.
+          <p>
+
+        </div>
+        <br>
+
+        <div class="publication-image" style="text-align:left">
+          <b>▶ Step 1: Target-Aspect Identification</b>
+          <p style="text-align:justify">Given input dialogue possibly with multimodal signals and with specific instruction, the initial step aims to prompt Sentica to identify all the possible and their specific aspects discussed within the dialogue.<p>
+          <center><img  width="70%" src="./static/images/step1.png"></center>
+        </div>
+        <br>
+
+        <div class="publication-image" style="text-align:left">
+          <b>▶ Step-2: Holder-Opinion Detection</b>
+          <p style="text-align:justify">The second step is to detect the holders and their specific opinions, regarding the identified targets and aspects. 
+          We require Sentica to output a set of quadruples consisting of the holder, target, aspect, and opinion.
+          After this step, we construct holder-target-aspect-opinion quadruples, which lay the foundation for understanding the further sentiment.<p>
+          <center><img  width="70%" src="./static/images/step2.png"></center>
+        </div>
+        <br>
+
+        <div class="publication-image" style="text-align:left">
+          <b>▶ Step-3: Sentiment-Rationale Mining</b>
+          <p style="text-align:justify">The third step then analyzes the sentiment with each opinion and identifies the rationale, based on the identified holder-target-aspect-opinion quadruples. 
+          We ask Sentica to output a set of sextuplets, by further adding sentiment and rationale to the previous quadruples.<p>
+          <center><img  width="70%" src="./static/images/step3.png"></center>
+        </div>
+        <br>
+
+
+        <div class="publication-image" style="text-align:left">
+          <b>▶ Step-4: Sentiment Flipping Trigger Classification</b>
+          <p style="text-align:justify">With all the sextuplets detected, the final step of discerning sentiment flipping would be much effortless.
+          Specifically, we prompt Sentica to first summarize any changes (i.e., from an initial sentiment to a flipped sentiment) in sentiment of same holder-target-aspect, and then classify the trigger label for each sentiment flip.<p>
+          <center><img  width="70%" src="./static/images/step4.png"></center>
+        </div>
+        <br>
+
+        <div class="publication-image" style="text-align:left">
+          <b>▶ Step-5: Paraphrase-based Verification</b>
+          <p style="text-align:justify">Given that we designed the entire two-task solution as a step-wise process, a potential issue is that CoS could lead to error accumulation. An intuitive approach is to first convert the structured k-tuples into natural language expressions through paraphrasing, effectively creating a claim that conveys the same meaning in a different format. 
+          Then, let the LLM check whether this claim is in an entailment or contradiction relationship with the given dialogue context and information. 
+          We refer to this as a <b>Paraphrase-based Verification (PpV)</b> mechanism.<p>
+        </div>
+        <br>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+<!--    <div class="content has-text-centered">-->
+<!--      <a class="icon-link"-->
+<!--         href="./static/videos/nerfies_paper.pdf">-->
+<!--        <i class="fas fa-file-pdf"></i>-->
+<!--      </a>-->
+<!--      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>-->
+<!--        <i class="fab fa-github"></i>-->
+<!--      </a>-->
+<!--    </div>-->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website template credit to <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 License</a>.
+          </p>
+<!--          <p>-->
+<!--            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,-->
+<!--            we just ask that you link back to this page in the footer.-->
+<!--            Please remember to remove the analytics code included in the header of the website which-->
+<!--            you do not want on your website.-->
+<!--          </p>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
