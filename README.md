@@ -9,7 +9,7 @@
 **The implementation of the ACM MM 2024 paper [PanoSent: A Panoptic Sextuple Extraction Benchmark for Multimodal Conversational Aspect-based Sentiment Analysis](https://is.gd/xxxx)**
 
 ----------
- ### 🎉 Visit the project page: [PanoSent](https://eurekaleo.github.io/PanoSent/)
+ ### 🎉 Visit the project page: [PanoSent](https://panosent.github.io)
 
 ----------
 
