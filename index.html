@@ -243,118 +243,97 @@
 
 <section class="section" style="margin-top: -10px">
   <div class="container is-max-desktop">
-    <!-- Paper method. -->
+    <!-- Combine all sections into one -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">Task Definition</h2>
-          <p style="text-align:left">
-            <strong>Subtask-I: Panoptic Sentiment Sextuple Extraction.</strong> Given a dialogue D = {u<sub>1</sub>, ..., u<sub>n</sub>} with the replying structure {(u<sub>i</sub>, u<sub>j</sub>), ...} (i.e., u<sub>i</sub> replies to u<sub>j</sub>), the task is to extract all sextuples (h, t, a, o, s, r). Each utterance u<sub>i</sub> = {w<sub>1</sub>, ..., w<sub>m<sub>i</sub></sub>} contains m<sub>i</sub> words in the text (denoted as I<sup>t</sup>), occasionally with associated non-text information pieces, i.e., image (I<sup>i</sup>), audio (I<sup>a</sup>), video (I<sup>v</sup>). The elements h (holder), t (target), a (aspect), o (opinion), and r (rationale) can be either the continuous text spans explicitly mentioned in utterances, or implicitly inferred from contexts or non-text modalities. s represents the sentiment category (positive, negative, or neutral).
-          </p>
         
-          <p style="text-align:left">
-            <strong>Subtask-II: Sentiment Flipping Analysis.</strong> Given input D, the same as in subtask-I, the task detects all sextuples (h, t, a, ζ, φ, τ). Here, h, t, and a denote the holder, target, and aspect, consistent with the definitions in subtask-I. ζ and φ represent the initial and flipped sentiments, respectively, highlighting the dynamic change in sentiment by the same speaker towards the same aspect of the same target. τ refers to a trigger that induces the sentiment transition, which is a pre-defined label among four categories: 1) <i>introduction of new information</i>, 2) <i>logical argumentation</i>, 3) <i>participant feedback and interaction</i>, and 4) <i>personal experience and self-reflection</i>. Since subtask-II shares multiple elements with subtask-I, it is natural to detect the flipping based on the results from subtask-I to minimize redundancy.
-          </p><br>
+        <!-- Task Definition -->
+        <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">Task Definition</h2>
+        <p style="text-align:left">
+          <strong>Subtask-I: Panoptic Sentiment Sextuple Extraction.</strong> Given a dialogue D = {u<sub>1</sub>, ..., u<sub>n</sub>} with the replying structure {(u<sub>i</sub>, u<sub>j</sub>), ...} (i.e., u<sub>i</sub> replies to u<sub>j</sub>), the task is to extract all sextuples (h, t, a, o, s, r). Each utterance u<sub>i</sub> = {w<sub>1</sub>, ..., w<sub>m<sub>i</sub></sub>} contains m<sub>i</sub> words in the text (denoted as I<sup>t</sup>), occasionally with associated non-text information pieces, i.e., image (I<sup>i</sup>), audio (I<sup>a</sup>), video (I<sup>v</sup>). The elements h (holder), t (target), a (aspect), o (opinion), and r (rationale) can be either the continuous text spans explicitly mentioned in utterances, or implicitly inferred from contexts or non-text modalities. s represents the sentiment category (positive, negative, or neutral).
+        </p>
+        <p style="text-align:left">
+          <strong>Subtask-II: Sentiment Flipping Analysis.</strong> Given input D, the same as in subtask-I, the task detects all sextuples (h, t, a, ζ, φ, τ). Here, h, t, and a denote the holder, target, and aspect, consistent with the definitions in subtask-I. ζ and φ represent the initial and flipped sentiments, respectively, highlighting the dynamic change in sentiment by the same speaker towards the same aspect of the same target. τ refers to a trigger that induces the sentiment transition, which is a pre-defined label among four categories: 1) <i>introduction of new information</i>, 2) <i>logical argumentation</i>, 3) <i>participant feedback and interaction</i>, and 4) <i>personal experience and self-reflection</i>. Since subtask-II shares multiple elements with subtask-I, it is natural to detect the flipping based on the results from subtask-I to minimize redundancy.
+        </p><br>
         <div class="publication-image">
           <img width="60%" src="./static/images/intro.png">
         </div>
         <br>
-  
 
-<section class="section" style="margin-top: -10px">
-  <div class="container is-max-desktop">
-    <!-- Paper method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+        <!-- PanoSent Dataset -->
         <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">PanoSent: A Multimodal Conversational ABSA Dataset</h2>
-          <p style="text-align:left">
+        <p style="text-align:left">
           We contribute a large-scale, high-quality benchmark dataset, PanoSent, featuring multiple aspects: conversational contexts, multimodality, multilingualism, and multidomain.
-          </p><br>
+        </p><br>
         <div class="publication-image">
           <img width="60%" src="./static/images/statistics.png">
-          <img width="60%" src="./static/images/distribution.png">
         </div>
         <br>
 
-<section class="section" style="margin-top: -10px">
-  <div class="container is-max-desktop">
-    <!-- Paper method. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+        <!-- Sentica MLLM -->
         <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">Sentica MLLM: Multimodal LLM Backbone</h2>
-          <p style="text-align:left">
-          We develop a novel MLLM, namely <b>Sentica</b>. Specifically, we leverage ImageBind as the unified encoders for all three non-text modalities. 
-          Then, a linear layer connects ImageBind to LLM for representation projection.
-          </p><br>
+        <p style="text-align:left">
+          We develop a novel MLLM, namely <b>Sentica</b>. Specifically, we leverage ImageBind as the unified encoders for all three non-text modalities. Then, a linear layer connects ImageBind to LLM for representation projection.
+        </p><br>
         <div class="publication-image">
           <img width="60%" src="./static/images/framework.png">
         </div>
         <br>
+        
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="section" style="margin-top: -10px">
+<section class="section">
   <div class="container is-max-desktop">
-    <!-- Paper method. -->
+    <!-- CoS Reasoning Framework -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">CoS Reasoning Framework</h2>
-          <p style="text-align:left">
-          We consider a human-like process of sentiment understanding and propose a <b>Chain-of-Sentiment (CoS)</b> reasoning framework.
-          For example, the opinion should be detected before determining the sentiment polarity; likewise, identifying the target and aspect has a higher priority over recognizing the opinion.
-          Thus, our main idea is that we deconstruct the two subtasks into four progressive, chained reasoning steps, from simpler to more complex.
-          Using the capability of Sentica, solving each step incrementally accumulates key clues and insights for the follow-up steps.
-          </p><br>
-
-
-        <div class="publication-image" style="text-align:left">
-          <b style="font-size: 1.5em">▶ CoS Reasoning Framework</b>
-          <p style="text-align:justify">We consider a human-like process of sentiment understanding and propose a <b>Chain-of-Sentiment (CoS)</b> reasoning framework.
-          For example, the opinion should be detected before determining the sentiment polarity; likewise, identifying the target and aspect has a higher priority over recognizing the opinion.
-          Thus, our main idea is that we deconstruct the two subtasks into four progressive, chained reasoning steps, from simpler to more complex.
-          Using the capability of Sentica, solving each step incrementally accumulates key clues and insights for the follow-up steps.
-          <p>
-
-        </div>
+        <h2 class="title is-2">CoS Reasoning Framework</h2>
+        <h2 class="title is-3" style="margin-top: -10px">Chain-of-Sentiment Reasoning</h2>
         <br>
 
         <div class="publication-image" style="text-align:left">
           <b>▶ Step 1: Target-Aspect Identification</b>
-          <p style="text-align:justify">Given input dialogue possibly with multimodal signals and with specific instruction, the initial step aims to prompt Sentica to identify all the possible and their specific aspects discussed within the dialogue.<p>
-          <center><img  width="70%" src="./static/images/step1.png"></center>
+          <p style="text-align:justify">Given input dialogue possibly with multimodal signals and with specific instruction, the initial step aims to prompt Sentica to identify all the possible targets and their specific aspects discussed within the dialogue.</p>
+          <center><img width="70%" src="./static/images/step1.png"></center>
         </div>
         <br>
 
         <div class="publication-image" style="text-align:left">
           <b>▶ Step-2: Holder-Opinion Detection</b>
           <p style="text-align:justify">The second step is to detect the holders and their specific opinions, regarding the identified targets and aspects. 
-          We require Sentica to output a set of quadruples consisting of the holder, target, aspect, and opinion.
-          After this step, we construct holder-target-aspect-opinion quadruples, which lay the foundation for understanding the further sentiment.<p>
-          <center><img  width="70%" src="./static/images/step2.png"></center>
+          We require Sentica to output a set of quadruples consisting of the holder, target, aspect, and opinion. After this step, we construct holder-target-aspect-opinion quadruples, which lay the foundation for understanding the further sentiment.</p>
+          <center><img width="70%" src="./static/images/step2.png"></center>
         </div>
         <br>
 
         <div class="publication-image" style="text-align:left">
           <b>▶ Step-3: Sentiment-Rationale Mining</b>
           <p style="text-align:justify">The third step then analyzes the sentiment with each opinion and identifies the rationale, based on the identified holder-target-aspect-opinion quadruples. 
-          We ask Sentica to output a set of sextuplets, by further adding sentiment and rationale to the previous quadruples.<p>
-          <center><img  width="70%" src="./static/images/step3.png"></center>
+          We ask Sentica to output a set of sextuplets, by further adding sentiment and rationale to the previous quadruples.</p>
+          <center><img width="70%" src="./static/images/step3.png"></center>
         </div>
         <br>
 
-
         <div class="publication-image" style="text-align:left">
           <b>▶ Step-4: Sentiment Flipping Trigger Classification</b>
-          <p style="text-align:justify">With all the sextuplets detected, the final step of discerning sentiment flipping would be much effortless.
-          Specifically, we prompt Sentica to first summarize any changes (i.e., from an initial sentiment to a flipped sentiment) in sentiment of same holder-target-aspect, and then classify the trigger label for each sentiment flip.<p>
-          <center><img  width="70%" src="./static/images/step4.png"></center>
+          <p style="text-align:justify">With all the sextuplets detected, the final step of discerning sentiment flipping would be much more effortless. Specifically, we prompt Sentica to first summarize any changes (i.e., from an initial sentiment to a flipped sentiment) in sentiment of the same holder-target-aspect, and then classify the trigger label for each sentiment flip.</p>
+          <center><img width="70%" src="./static/images/step4.png"></center>
         </div>
         <br>
 
         <div class="publication-image" style="text-align:left">
           <b>▶ Step-5: Paraphrase-based Verification</b>
-          <p style="text-align:justify">Given that we designed the entire two-task solution as a step-wise process, a potential issue is that CoS could lead to error accumulation. An intuitive approach is to first convert the structured k-tuples into natural language expressions through paraphrasing, effectively creating a claim that conveys the same meaning in a different format. 
-          Then, let the LLM check whether this claim is in an entailment or contradiction relationship with the given dialogue context and information. 
-          We refer to this as a <b>Paraphrase-based Verification (PpV)</b> mechanism.<p>
+          <p style="text-align:justify">Given that we designed the entire two-task solution as a step-wise process, a potential issue is that CoS could lead to error accumulation. An intuitive approach is to first convert the structured k-tuples into natural language expressions through paraphrasing, effectively creating a claim that conveys the same meaning in a different format. Then, let the LLM check whether this claim is in an entailment or contradiction relationship with the given dialogue context and information. We refer to this as a <b>Paraphrase-based Verification (PpV)</b> mechanism.</p>
         </div>
         <br>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
