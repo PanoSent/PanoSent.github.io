@@ -60,7 +60,7 @@
             <span class="author-block">
               <a href="https://chocowu.github.io/">Shengqiong Wu</a><sup>1</sup>,
             </span>
-              <a href="https://profiles.auckland.ac.nz/liu-qian">Qian Liu</a><sup>1</sup>,</span>
+              <a href="https://profiles.auckland.ac.nz/liu-qian">Qian Liu</a><sup>3</sup>,</span><br>
             <span class="author-block">
               <a href="https://scholar.google.com.sg/citations?user=oS6gRc4AAAAJ&hl=en">Soujanya Poria</a><sup>3</sup>,</span>
             <span class="author-block">
@@ -83,7 +83,7 @@
             <span class="author-block"><sup>5</sup>Nanyang Technological University</span><br>
           </div>
           <br>
-          <span class="author-block" style="font-size: 20px;">Accepted by ACM MM 2024 (Oral)</span><br>
+          <span class="author-block" style="font-size: 20px;"><span style="color: red; font-weight: bold;">(Oral)</span></span><br>
           <span class="author-block" style="font-size: 20px;">(* Correspondence)</span>
           <br><br>
           <div class="column has-text-centered">
@@ -230,15 +230,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            While existing Aspect-based Sentiment Analysis (ABSA) has received extensive effort and advancement, there are still gaps in
-            defining a more holistic research target seamlessly integrating multimodality, conversation context, fine-granularity, and also covering
-            the changing sentiment dynamics as well as cognitive causal rationales. This paper bridges the gaps by introducing a multimodal
-            conversational ABSA, where two novel subtasks are proposed: 1) Panoptic Sentiment Sextuple Extraction, panoramically recognizing holder, target, aspect, opinion, sentiment, rationale from multi-turn multi-party multimodal dialogue. 
-            2) Sentiment Flipping Analysis, detecting the dynamic sentiment transformation throughout the conversation with the causal reasons. To benchmark
-            the tasks, we construct PanoSent, a dataset annotated both manually and automatically, featuring high quality, large scale (20,000 dialogues), multimodality (text, image, audio and video), multilingualism (English, Chinese and Spanish), 
-            multi-scenarios (over 100 domains), and covering both implicit&explicit sentiment elements. Further, to effectively address the tasks, we devise a novel Chain-of-Sentiment reasoning framework, together with a novel multimodal
-            large language model (namely Sentica) and a paraphrase-based verification mechanism. Extensive evaluations demonstrate the
-            superiority of our methods over strong baselines, validating the efficacy of all our proposed methods. The work is expected to open up a new era for the ABSA community.
+            While existing Aspect-based Sentiment Analysis (ABSA) has received extensive effort and advancement, there are still gaps in 
+            defining a more holistic research target seamlessly integrating multimodality, conversation context, fine-granularity, and also covering the changing sentiment dynamics as well as cognitive causal rationales.
+            This paper bridges the gaps by introducing a multimodal conversational ABSA, where two novel subtasks are proposed: 
+            1) \textbf{Panoptic Sentiment Sextuple Extraction}, panoramically recognizing \emph{holder, target, aspect, opinion, sentiment, rationale} from multi-turn multi-party multimodal dialogue.
+            2) \textbf{Sentiment Flipping Analysis}, detecting the dynamic sentiment transformation throughout the conversation with the causal reasons.
+            To benchmark the tasks, we construct PanoSent, a dataset annotated both manually and automatically, featuring high quality, large scale, multimodality, multilingualism, multi-scenarios, and covering both implicit\&explicit sentiment elements.
+            To effectively address the tasks, we devise a novel Chain-of-Sentiment reasoning framework, together with a novel multimodal large language model (namely Sentica) and a paraphrase-based verification mechanism.
+            Extensive evaluations demonstrate the superiority of our methods over strong baselines, validating the efficacy of all our proposed methods.
+            The work is expected to open up a new era for the ABSA community,
           </p>
         </div>
       </div>
@@ -277,7 +277,7 @@
 <!--            Explicit opinion expression can help direct inference of the sentiment, while detecting implicit sentiment requires common-sense and multi-hop reasoning.-->
 <!--          </p><br>-->
         <div class="publication-image" style="text-align:left">
-          <b style="text-align:left;font-size: 1.5em">▶PanoSent Benchmark</b>
+          <b style="font-size: 1.5em">▶ PanoSent Benchmark</b>
         </div>
         <div class="publication-image" style="text-align:center">
           <img width="40%" src="./static/images/intro.png">
