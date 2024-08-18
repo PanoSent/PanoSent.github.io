@@ -248,7 +248,6 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">Task Definition</h2>
           <p style="text-align:left">
-            We formally give the definitions of two subtasks, which also are illustrated in the figure with specific examples. 
             <strong>Subtask-I: Panoptic Sentiment Sextuple Extraction.</strong> Given a dialogue D = {u<sub>1</sub>, ..., u<sub>n</sub>} with the replying structure {(u<sub>i</sub>, u<sub>j</sub>), ...} (i.e., u<sub>i</sub> replies to u<sub>j</sub>), the task is to extract all sextuples (h, t, a, o, s, r). Each utterance u<sub>i</sub> = {w<sub>1</sub>, ..., w<sub>m<sub>i</sub></sub>} contains m<sub>i</sub> words in the text (denoted as I<sup>t</sup>), occasionally with associated non-text information pieces, i.e., image (I<sup>i</sup>), audio (I<sup>a</sup>), video (I<sup>v</sup>). The elements h (holder), t (target), a (aspect), o (opinion), and r (rationale) can be either the continuous text spans explicitly mentioned in utterances, or implicitly inferred from contexts or non-text modalities. s represents the sentiment category (positive, negative, or neutral).
           </p>
         
@@ -290,6 +289,19 @@
           <img width="60%" src="./static/images/framework.png">
         </div>
         <br>
+
+<section class="section" style="margin-top: -10px">
+  <div class="container is-max-desktop">
+    <!-- Paper method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -10px;font-size: 1.8em">CoS Reasoning Framework</h2>
+          <p style="text-align:left">
+          We consider a human-like process of sentiment understanding and propose a <b>Chain-of-Sentiment (CoS)</b> reasoning framework.
+          For example, the opinion should be detected before determining the sentiment polarity; likewise, identifying the target and aspect has a higher priority over recognizing the opinion.
+          Thus, our main idea is that we deconstruct the two subtasks into four progressive, chained reasoning steps, from simpler to more complex.
+          Using the capability of Sentica, solving each step incrementally accumulates key clues and insights for the follow-up steps.
+          </p><br>
 
 
         <div class="publication-image" style="text-align:left">
