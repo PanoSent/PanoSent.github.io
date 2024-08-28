@@ -48,7 +48,12 @@ In summary, this work makes three significant contributions:
 If you use this work, please kindly cite:
 
 ```
-(TBD)
+@article{luo2024panosent,
+  title={PanoSent: A Panoptic Sextuple Extraction Benchmark for Multimodal Conversational Aspect-based Sentiment Analysis},
+  author={Luo, Meng and Fei, Hao and Li, Bobo and Wu, Shengqiong and Liu, Qian and Poria, Soujanya and Cambria, Erik and Lee, Mong-Li and Hsu, Wynne},
+  journal={arXiv preprint arXiv:2408.09481},
+  year={2024}
+}
 ```
 
 ----------
